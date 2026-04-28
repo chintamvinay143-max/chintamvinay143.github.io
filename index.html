@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay Kumar | Prompt Engineer</title>
+
+    <style>
+        /* --- 1. CORE STYLES & DARK THEME --- */
+        html {
+            /* Makes clicking any internal links scroll smoothly rather than instantly jumping */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f11;
+            /* Slightly darker, richer black */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Prevents horizontal scrolling issues from animations */
+        }
+
+        /* --- 2. ANIMATIONS (KEYFRAMES) --- */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- 3. HEADER STYLING --- */
+        header {
+            background: linear-gradient(180deg, #1a1a20 0%, #0f0f11 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 1px solid #2a2a35;
+            animation: fadeDown 1s ease-out forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #4da6ff, #b3d9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #888899;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Styling for the contact info */
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: #b3d9ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* --- 4. MAIN CONTAINER & TEXT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .about-section {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.3s forwards;
+        }
+
+        .about-section h2 {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        /* --- 5. THE IMAGE GALLERY --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+            /* Space between gallery and footer image */
+        }
+
+        .gallery-item {
+            background-color: #1a1a20;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .gallery-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(77, 166, 255, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.4s ease;
+            filter: brightness(0.85);
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(1.1);
+        }
+
+        /* --- 6. FOOTER IMAGE STYLING --- */
+        .footer-image-section {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid #2a2a35;
+            /* Visual break */
+        }
+
+        .footer-image-section img {
+            width: 100%;
+            height: auto;
+            /* Ensures aspect ratio is maintained in full landscape */
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 7. FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0c;
+            color: #555;
+            font-size: 0.9rem;
+            /* Ensure the footer is clearly positioned below the full-width image */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vinay Kumar</h1>
+        <p>Prompt Engineer | AI Model Training & Visual Generation</p>
+
+        <div class="contact-info">
+            <a href="mailto:chintamvinay143@gmail.com">📧 chintamvinay143@gmail.com</a> |
+            <a href="tel:7981141759">📱 7981141759</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="about-section">
+            <h2>About My Work</h2>
+            <p>
+                I specialize in advanced Prompt Engineering, LLM evaluation, RLHF (Reinforcement Learning from Human
+                Feedback), and SFT (Supervised Fine-Tuning). Alongside text-based model training, I explore the creative
+                limits of generative AI by crafting highly detailed, context-aware images and videos.
+            </p>
+            <p>
+                Below is a curated series titled <strong style="color: #4da6ff;">"The Divine in the Everyday"</strong>,
+                showcasing precise style-matching, character consistency, and complex multi-subject interactions using
+                text-to-image models.
+            </p>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item"><img src="1.jpeg" alt="AI Generated Image - Friends with Gods"></div>
+            <div class="gallery-item"><img src="2.jpeg" alt="AI Generated Image - Putting a flower in hair"></div>
+            <div class="gallery-item"><img src="3.jpeg" alt="AI Generated Image - Motorcycle ride"></div>
+            <div class="gallery-item"><img src="4.jpeg" alt="AI Generated Image - Sitting on a bench laughing"></div>
+            <div class="gallery-item"><img src="5.jpeg" alt="AI Generated Image - Crying and being comforted"></div>
+            <div class="gallery-item"><img src="6.jpeg" alt="AI Generated Image - Receiving a blessing"></div>
+            <div class="gallery-item"><img src="7.jpeg" alt="AI Generated Image - Casual chat"></div>
+            <div class="gallery-item"><img src="8.jpeg" alt="AI Generated Image - Studio setup"></div>
+            <div class="gallery-item"><img src="9.jpeg" alt="AI Generated Image - Sitting by a wall"></div>
+            <div class="gallery-item"><img src="10.jpeg" alt="AI Generated Image - Casual chat"></div>
+            <div class="gallery-item"><img src="11.jpeg" alt="AI Generated Image - Studio setup"></div>
+        </section>
+
+    </div>
+    <section class="footer-image-section">
+        <img src="12.jpeg" alt="AI Generated Concluding Image">
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vinay Kumar. Built for GitHub Pages.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            galleryItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
